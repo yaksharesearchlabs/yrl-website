@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Investigating WebSocket Handshakes | Yaksha Research Labs</title>
+<meta name="description" content="Practical cybersecurity research, hands-on laboratories, technical investigations, and learning paths.">
+<link rel="canonical" href="https://yaksharesearchlabs.com/field-notes/">
+<meta property="og:title" content="Investigating WebSocket Handshakes | Yaksha Research Labs">
+<meta property="og:description" content="Cybersecurity research and education through practical investigation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yaksharesearchlabs.com">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Yaksha Research Labs home"><span class="mark">Y</span><span><strong>YAKSHA</strong><small>RESEARCH LABS</small></span></a>
+  <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav class="nav" aria-label="Primary navigation"><a class="" href="/research/">Research</a><a class="" href="/labs/">Labs</a><a class="" href="/challenges/">Challenges</a><a class="" href="/learning-paths/">Learning Paths</a><a class="active" href="/field-notes/">Field Notes</a><a class="" href="/resources/">Resources</a><a class="" href="/about/">About</a></nav>
+  <div class="header-tools"><button class="search-button" aria-label="Search">⌕</button><a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a></div>
+</header>
+<main id="main"><article class="article"><div class="eyebrow">Field Note / Application Security · WebSockets</div><h1>Investigating WebSocket Handshakes</h1><div class="meta"><span>Yaksha Research Labs</span><span>·</span><span>Field observation</span></div>
+<p class="lead">Short observations about handshake metadata, authentication context and what changes once the connection becomes persistent.</p><h2>Observation</h2><p>The useful part of a technical experiment is often the assumption that turns out to be wrong. This note records the investigation in a compact form so the observation can be reused later.</p>
+<h2>What changed my understanding</h2><p>When a system is automated, containerized, embedded or connected to another trust domain, the visible configuration is rarely the whole security boundary. Follow the dependencies and inspect the evidence produced at each step.</p>
+<h2>Practical takeaway</h2><p>Rebuild the smallest environment that demonstrates the behavior. Record what you expected, what actually happened, and what evidence would let someone else reproduce the conclusion.</p></article></main>
+<footer class="footer">
+  <div><a class="brand" href="/"><span class="mark">Y</span><span><strong>YAKSHA</strong><small>RESEARCH LABS</small></span></a><p>Cybersecurity research and education through practical investigation.</p></div>
+  <div class="footer-links"><a href="/research/">Research</a><a href="/labs/">Labs</a><a href="/challenges/">Challenges</a><a href="/learning-paths/">Learning Paths</a><a href="/field-notes/">Field Notes</a><a href="/resources/">Resources</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+  <div class="footer-meta"><a href="/privacy/">Privacy</a><a href="/responsible-research/">Responsible Research</a><a href="/terms/">Terms</a><span>© 2026 Yaksha Research Labs</span></div>
+</footer>
+<div class="search-modal" aria-hidden="true"><div class="search-panel"><button class="close-search">×</button><h2>Search the lab</h2><input id="search-input" placeholder="Search research, labs, challenges..." autofocus><div id="search-results"></div></div></div>
+<script src="/assets/app.js"></script>
+</body></html>

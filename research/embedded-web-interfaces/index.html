@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Understanding the Attack Surface of Embedded Web Interfaces | Yaksha Research Labs</title>
+<meta name="description" content="Practical cybersecurity research, hands-on laboratories, technical investigations, and learning paths.">
+<link rel="canonical" href="https://yaksharesearchlabs.com/research/">
+<meta property="og:title" content="Understanding the Attack Surface of Embedded Web Interfaces | Yaksha Research Labs">
+<meta property="og:description" content="Cybersecurity research and education through practical investigation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yaksharesearchlabs.com">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Yaksha Research Labs home"><span class="mark">Y</span><span><strong>YAKSHA</strong><small>RESEARCH LABS</small></span></a>
+  <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav class="nav" aria-label="Primary navigation"><a class="active" href="/research/">Research</a><a class="" href="/labs/">Labs</a><a class="" href="/challenges/">Challenges</a><a class="" href="/learning-paths/">Learning Paths</a><a class="" href="/field-notes/">Field Notes</a><a class="" href="/resources/">Resources</a><a class="" href="/about/">About</a></nav>
+  <div class="header-tools"><button class="search-button" aria-label="Search">⌕</button><a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a></div>
+</header>
+<main id="main"><article class="article">
+<div class="eyebrow">Embedded Security / Lab Available</div><h1>Understanding the Attack Surface of Embedded Web Interfaces</h1>
+<p class="lead">An investigation into firmware structure, embedded web services, exposed configuration and insecure implementation choices.</p>
+<div class="meta"><span>Published 2026-08-21</span><span>·</span><span>11 min</span><span>·</span><span>Intermediate</span></div>
+<div class="toc"><strong>Contents</strong><a href="#s0">Executive Summary</a><a href="#s1">Environment</a><a href="#s2">Technical Analysis</a><a href="#s3">Reproduction Lab</a><a href="#s4">Detection</a><a href="#s5">Mitigation</a></div>
+<h2>Executive Summary</h2><p>Embedded web interfaces often expose the bridge between firmware functionality and an operator's browser. Firmware analysis can reveal how that bridge is implemented and where its assumptions fail.</p>
+<div class="diagram">Developer → Repository → CI/CD → Identity → Infrastructure
+                         ↓
+                    Evidence & Logs
+                         ↓
+                    Detection / Defense</div>
+<section id="s0"><h2>Executive Summary</h2><p>A firmware image can contain the web application, configuration files, credentials, scripts, binaries and startup logic needed to reconstruct a device's security model.</p></section><section id="s1"><h2>Environment</h2><p>The research workflow begins with a firmware image, extraction, architecture identification and inventory of web-related files and services.</p></section><section id="s2"><h2>Technical Analysis</h2><p>Trace HTTP handlers, CGI programs, configuration files and authentication flows. Look for hard-coded values, unsafe command construction, weak authorization and sensitive information exposed to the web layer.</p></section><section id="s3"><h2>Reproduction Lab</h2><p>The IoT Firmware Investigation lab provides a controlled environment for practicing this workflow.</p></section><section id="s4"><h2>Detection</h2><p>Evidence can include unexpected web requests, command execution artifacts, authentication failures and changes to configuration.</p></section><section id="s5"><h2>Mitigation</h2><p>Reduce exposed functionality, enforce strong authorization, remove secrets from firmware, validate inputs and keep administrative interfaces isolated from untrusted networks.</p></section>
+<section><h2>Reproduction Lab</h2><p>This investigation can be explored through the corresponding controlled laboratory where applicable. Keep all experimentation within systems you own or are explicitly authorized to test.</p><a class="btn" href="/labs/">Explore the laboratories →</a></section>
+<section><h2>Further Research</h2><p>What changes when the attacker has less privilege? Which assumptions can be tested independently? What evidence survives when the environment is rebuilt? These are the questions that turn a demonstration into research.</p></section>
+</article></main>
+<footer class="footer">
+  <div><a class="brand" href="/"><span class="mark">Y</span><span><strong>YAKSHA</strong><small>RESEARCH LABS</small></span></a><p>Cybersecurity research and education through practical investigation.</p></div>
+  <div class="footer-links"><a href="/research/">Research</a><a href="/labs/">Labs</a><a href="/challenges/">Challenges</a><a href="/learning-paths/">Learning Paths</a><a href="/field-notes/">Field Notes</a><a href="/resources/">Resources</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+  <div class="footer-meta"><a href="/privacy/">Privacy</a><a href="/responsible-research/">Responsible Research</a><a href="/terms/">Terms</a><span>© 2026 Yaksha Research Labs</span></div>
+</footer>
+<div class="search-modal" aria-hidden="true"><div class="search-panel"><button class="close-search">×</button><h2>Search the lab</h2><input id="search-input" placeholder="Search research, labs, challenges..." autofocus><div id="search-results"></div></div></div>
+<script src="/assets/app.js"></script>
+</body></html>

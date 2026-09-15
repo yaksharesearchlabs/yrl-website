@@ -1,0 +1,10 @@
+{
+  "name": "yaksha-research-labs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static cybersecurity research and education website.",
+  "scripts": {
+    "dev": "python3 -m http.server 8080",
+    "build": "echo 'Static site: no build step required.'"
+  }
+}

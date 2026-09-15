@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WebSocket Security Lab | Yaksha Research Labs</title>
+<meta name="description" content="Practical cybersecurity research, hands-on laboratories, technical investigations, and learning paths.">
+<link rel="canonical" href="https://yaksharesearchlabs.com/labs/">
+<meta property="og:title" content="WebSocket Security Lab | Yaksha Research Labs">
+<meta property="og:description" content="Cybersecurity research and education through practical investigation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yaksharesearchlabs.com">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Yaksha Research Labs home"><span class="mark">Y</span><span><strong>YAKSHA</strong><small>RESEARCH LABS</small></span></a>
+  <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav class="nav" aria-label="Primary navigation"><a class="" href="/research/">Research</a><a class="active" href="/labs/">Labs</a><a class="" href="/challenges/">Challenges</a><a class="" href="/learning-paths/">Learning Paths</a><a class="" href="/field-notes/">Field Notes</a><a class="" href="/resources/">Resources</a><a class="" href="/about/">About</a></nav>
+  <div class="header-tools"><button class="search-button" aria-label="Search">⌕</button><a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a></div>
+</header>
+<main id="main"><article class="article"><div class="eyebrow">Laboratory / Intermediate</div><h1>WebSocket Security Lab</h1><p class="lead">Investigate connection handling, message authorization and trust assumptions in a controlled WebSocket application.</p>
+<div class="meta"><span>WebSockets · Authentication · Authorization · Message Handling</span><span>·</span><span>Controlled environment</span></div>
+<h2>Objective</h2><p>Understand the security assumptions represented by this environment and develop an evidence-based explanation of how they can fail.</p>
+<h2>Scenario</h2><p>You are investigating a fictional environment where an apparently ordinary workflow has created an unexpected security condition. Your task is to understand the path, not merely reach a predetermined answer.</p>
+<h2>Environment</h2><div class="diagram">Internet
+   ↓
+Developer Workstation
+   ↓
+Source Repository
+   ↓
+Automation / Service
+   ↓
+Cloud or Internal Environment</div>
+<h2>Starting Information</h2><p>You begin with the environment description, basic access appropriate to the scenario, and the artifacts explicitly provided by the lab. Avoid assuming that every interesting clue is already known to you.</p>
+<h2>Investigation</h2><ul><li>What services are exposed?</li><li>What identities exist?</li><li>Which credentials or tokens are available?</li><li>What trust relationships exist?</li><li>What happens when the relevant component executes?</li><li>What evidence does the activity leave behind?</li></ul>
+<h2>Research Tasks</h2><ol><li>Map the architecture and trust boundaries.</li><li>Identify the security-relevant assumption.</li><li>Reproduce the behavior in the controlled environment.</li><li>Collect evidence supporting your conclusion.</li><li>Describe a practical defensive control.</li></ol>
+<h2>Detection</h2><p>Ask: <strong>What would a defender see?</strong> Record endpoint, network, identity and application evidence where available.</p>
+<h2>Mitigation</h2><p>Ask: <strong>How would you prevent this attack?</strong> Prefer controls that reduce privilege or remove unnecessary trust rather than relying on a single detection rule.</p>
+<h2>Further Investigation</h2><p>Change one assumption at a time. What happens if the identity has fewer permissions, the workflow runs from another branch, or the attacker has only temporary access?</p>
+</article></main>
+<footer class="footer">
+  <div><a class="brand" href="/"><span class="mark">Y</span><span><strong>YAKSHA</strong><small>RESEARCH LABS</small></span></a><p>Cybersecurity research and education through practical investigation.</p></div>
+  <div class="footer-links"><a href="/research/">Research</a><a href="/labs/">Labs</a><a href="/challenges/">Challenges</a><a href="/learning-paths/">Learning Paths</a><a href="/field-notes/">Field Notes</a><a href="/resources/">Resources</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+  <div class="footer-meta"><a href="/privacy/">Privacy</a><a href="/responsible-research/">Responsible Research</a><a href="/terms/">Terms</a><span>© 2026 Yaksha Research Labs</span></div>
+</footer>
+<div class="search-modal" aria-hidden="true"><div class="search-panel"><button class="close-search">×</button><h2>Search the lab</h2><input id="search-input" placeholder="Search research, labs, challenges..." autofocus><div id="search-results"></div></div></div>
+<script src="/assets/app.js"></script>
+</body></html>

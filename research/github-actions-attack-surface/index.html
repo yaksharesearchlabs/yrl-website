@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GitHub Actions as an Attack Surface | Yaksha Research Labs</title>
+<meta name="description" content="Practical cybersecurity research, hands-on laboratories, technical investigations, and learning paths.">
+<link rel="canonical" href="https://yaksharesearchlabs.com/research/">
+<meta property="og:title" content="GitHub Actions as an Attack Surface | Yaksha Research Labs">
+<meta property="og:description" content="Cybersecurity research and education through practical investigation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yaksharesearchlabs.com">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="/" aria-label="Yaksha Research Labs home"><span class="mark">Y</span><span><strong>YAKSHA</strong><small>RESEARCH LABS</small></span></a>
+  <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <nav class="nav" aria-label="Primary navigation"><a class="active" href="/research/">Research</a><a class="" href="/labs/">Labs</a><a class="" href="/challenges/">Challenges</a><a class="" href="/learning-paths/">Learning Paths</a><a class="" href="/field-notes/">Field Notes</a><a class="" href="/resources/">Resources</a><a class="" href="/about/">About</a></nav>
+  <div class="header-tools"><button class="search-button" aria-label="Search">⌕</button><a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a></div>
+</header>
+<main id="main"><article class="article">
+<div class="eyebrow">DevSecOps / Lab Available</div><h1>GitHub Actions as an Attack Surface</h1>
+<p class="lead">Examining how CI/CD workflows, repository permissions, secrets, and cloud identity can combine to create unexpected attack paths.</p>
+<div class="meta"><span>Published 2026-09-07</span><span>·</span><span>10 min</span><span>·</span><span>Intermediate</span></div>
+<div class="toc"><strong>Contents</strong><a href="#s0">Executive Summary</a><a href="#s1">Why This Matters</a><a href="#s2">Architecture</a><a href="#s3">Technical Analysis</a><a href="#s4">Detection</a><a href="#s5">Mitigation</a></div>
+<h2>Executive Summary</h2><p>CI/CD automation is powerful because it is trusted. This research maps the security relationships between repository events, workflow permissions, secrets and cloud identities.</p>
+<div class="diagram">Developer → Repository → CI/CD → Identity → Infrastructure
+                         ↓
+                    Evidence & Logs
+                         ↓
+                    Detection / Defense</div>
+<section id="s0"><h2>Executive Summary</h2><p>A workflow can have more effective privilege than the developer who triggered it. Understanding that difference is central to reviewing CI/CD attack paths.</p></section><section id="s1"><h2>Why This Matters</h2><p>Repository contents, pull requests, workflow configuration and cloud credentials can form a chain of trust. A weakness at one point can expose a much larger environment.</p></section><section id="s2"><h2>Architecture</h2><p>A representative path is Developer → Repository → GitHub Actions → Federated Identity → Cloud Resources. Each arrow represents a trust decision worth examining.</p></section><section id="s3"><h2>Technical Analysis</h2><p>Review event triggers, permissions, reusable workflows, action sources, secret exposure, artifact handling and identity federation. Determine which workflow contexts can influence privileged execution.</p></section><section id="s4"><h2>Detection</h2><p>Look for unusual workflow runs, permission changes, unexpected identity federation events, anomalous artifact access and cloud activity immediately following CI executions.</p></section><section id="s5"><h2>Mitigation</h2><p>Use least-privilege workflow permissions, protected environments, trusted actions, explicit approval boundaries and narrowly scoped cloud identities.</p></section>
+<section><h2>Reproduction Lab</h2><p>This investigation can be explored through the corresponding controlled laboratory where applicable. Keep all experimentation within systems you own or are explicitly authorized to test.</p><a class="btn" href="/labs/">Explore the laboratories →</a></section>
+<section><h2>Further Research</h2><p>What changes when the attacker has less privilege? Which assumptions can be tested independently? What evidence survives when the environment is rebuilt? These are the questions that turn a demonstration into research.</p></section>
+</article></main>
+<footer class="footer">
+  <div><a class="brand" href="/"><span class="mark">Y</span><span><strong>YAKSHA</strong><small>RESEARCH LABS</small></span></a><p>Cybersecurity research and education through practical investigation.</p></div>
+  <div class="footer-links"><a href="/research/">Research</a><a href="/labs/">Labs</a><a href="/challenges/">Challenges</a><a href="/learning-paths/">Learning Paths</a><a href="/field-notes/">Field Notes</a><a href="/resources/">Resources</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+  <div class="footer-meta"><a href="/privacy/">Privacy</a><a href="/responsible-research/">Responsible Research</a><a href="/terms/">Terms</a><span>© 2026 Yaksha Research Labs</span></div>
+</footer>
+<div class="search-modal" aria-hidden="true"><div class="search-panel"><button class="close-search">×</button><h2>Search the lab</h2><input id="search-input" placeholder="Search research, labs, challenges..." autofocus><div id="search-results"></div></div></div>
+<script src="/assets/app.js"></script>
+</body></html>
